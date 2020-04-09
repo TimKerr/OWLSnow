@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		  <title>Snow water equivalent</title>							<!-- this is the title on the tab of the web page -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dygraph/1.1.0/dygraph-combined.js"></script>
+	<style type="text/css">
+      /*
+      NOTE: dygraphs does set some properties on the built-in legend, e.g.
+      background-color and left. If you wish to override these, you can add
+      "!important" to your CSS styles, as below.
+
+      The full list of styles for which this is necessary are listed in
+      plugins/legend.js. They are:
+      o position
+      o font-size
+      o z-index
+      o width
+      o top
+      o left
+      o background
+      o line-height
+      o text-align
+      o overflow
+      */
+      #graphdiv { position: absolute; left: 10px; right: 10px; top: 10px; bottom: 10px; }
+      #graphdiv .dygraph-legend {
+        width: 100px;
+        background-color: transparent !important;
+        left: 160px !important;
+      }
+      #graphdiv .dygraph-ylabel { font-size: 18px; }
+		  
+    </style>
+	</head>
+	<body>
+	<div id="graphdiv" ></div>
+	<!--<div id="graphdiv" style="width:600px; height:300px;" ></div>-->
+	<script type="text/javascript">
+	  g = new Dygraph(
+
+		// containing div
+		document.getElementById("graphdiv"),
+
+		// CSV or path to a CSV file.
+                 // For possible data formats, see http://dygraphs.com/data.html
+                 // The x-values could also be dates, e.g. "2012/03/15"
+                 "OpuhaGraphData.csv",
+                 {
+					// options go here. See http://dygraphs.com/options.html
+					ylabel: 'Snow storage (m\u00B3 of water)',
+					yAxisLabelWidth: 130,
+					legend: 'always',
+					animatedZooms: true,
+					maxNumberWidth: 10,
+					digitsAfterDecimal: 0,
+					title: 'Opuha snow storage',
+                    strokeWidth: 3,
+					customBars: false,
+					labelsSeparateLines: true,
+					'Current year': {
+						color: 'red'
+					}
+                 });
+
+	</script>
+	</body>
+</html>
+
