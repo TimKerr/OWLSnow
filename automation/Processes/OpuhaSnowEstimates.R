@@ -404,7 +404,7 @@ MedianMaximum <- function(InputFileName = "\\\\aqualinc-sbs\\data\\ARL Projects\
 
 GraphOpuhaSnowM3Y<-function(InputFileName = "\\\\aqualinc-sbs\\data\\ARL Projects\\Other\\C15114_OWL snow storage estimates\\automation\\Input\\OpuhaSnowDataComplete.csv",CurrentYear= 2017)
 {
-  browser()
+  #browser()
   #  InputFileName        <-  "\\\\aqualinc-sbs\\data\\ARL Projects\\Other\\C15114_OWL snow storage estimates\\automation\\Input\\OpuhaSnowDataComplete.csv"
   #  CurrentYear          <-  2015
   
@@ -557,14 +557,7 @@ GraphOpuhaSnowM3Y<-function(InputFileName = "\\\\aqualinc-sbs\\data\\ARL Project
     layout(legend = list(traceorder = "reversed"))
       #layout(yaxis = list(hoverformat = '.2f.'))
  print(py2)             
- browser()
- # #Put the graph on the web via plotly
- # Sys.setenv("plotly_username"="timkerr37")
- # Sys.setenv("plotly_api_key"="1maimuigbz")
- # 
- # #py <- ggplotly()
- # 
- # WebPlot <- api_create(py2, filename="OpuhaSnow",fileopt="overwrite",sharing="public")
+ #browser()
  
  #Save the plot as an html file
  htmlwidgets::saveWidget(as_widget(py2), "OpuhaSnow.html", selfcontained = TRUE)
