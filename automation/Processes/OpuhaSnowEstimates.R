@@ -759,5 +759,8 @@ CompleteSnowData$Thirty.Day.Average.Millions.Of.Cubic.Metres <- stats::filter(Co
 CompleteSnowData[,-1] <- round(CompleteSnowData[,-1],1)
 CompleteSnowData <- CompleteSnowData[which(as.Date(CompleteSnowData$Date) < Sys.Date()),]
 CompleteSnowData <- CompleteSnowData[order(as.Date(CompleteSnowData$Date),decreasing = TRUE),]
+#Save a copy locally
+write.csv(CompleteSnowData[,c("Date","Millions.Of.Cubic.Metres","Thirty.Day.Average.Millions.Of.Cubic.Metres")],file.path(InputWorkingDirectory,"OpuhaSnowData30DaySmoothedM3xmillion.csv",fsep="\\"),row.names=FALSE,quote=FALSE)
+#Save a copy to the ftp directory
 write.csv(CompleteSnowData[,c("Date","Millions.Of.Cubic.Metres","Thirty.Day.Average.Millions.Of.Cubic.Metres")],CompleteSnowDataFileNameForFTP,row.names=FALSE,quote=FALSE)
 
