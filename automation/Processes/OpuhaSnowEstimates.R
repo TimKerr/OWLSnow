@@ -710,6 +710,18 @@ dev.off()
 #!!!!!!!!!!!!!!!!Edit the following line to match the directory where it all happens!!!!!!!!!!!!
 #setwd("C:\\Users\\t.kerr\\Documents\\Projects\\C15114_OWL snow storage estimates\\Processes")
 #setwd("M:\\Processes")
+
+#the next line is required to ensure the pandoc application can be found when this script is run outside of RStudio
+#pandoc is used to create the snow storage graph in html
+#On my Windows laptop version
+if ((Sys.info()['sysname'] == "Windows") & (Sys.info()['nodename'] == "DESKTOP-H33OPJ4")){
+  #if (!require(ssh)) install.packages('ssh'); library(ssh)
+  Sys.setenv(RSTUDIO_PANDOC = "C:/Program Files/RStudio/bin/pandoc")
+  setwd('D:/Projects/Aqualinc/projects/Opuha SnowSim_C15114/R/OWLSnow/automation/Processes')
+} else if ((Sys.info()['sysname'] == "Windows") & (Sys.info()['nodename'] == "APPSERVER-01")) 
+  Sys.setenv(RSTUDIO_PANDOC = "C:/Program Files/Pandoc")
+  setwd('C:\\Transfer Scripts\\Outgoing\\C15114_OWL snow storage estimates\\Processes')
+
 ProcessesDirectory<-getwd()
 BaseDirectory=normalizePath(dirname(ProcessesDirectory))
 #BaseDirectory="\\\\aqualinc-sbs\\data\\ARL Projects\\RD Projects\\RD18004_Lake Opuha Further Work\\"
