@@ -13,9 +13,9 @@
 ReformatECSData<-function(ECSFile="G:\\ARL Projects\\RD Projects\\RD18004_Lake Opuha Further Work\\Data\\ToAqualinc.zip",CompleteECSDataFile="CompleteECSData.RDS")
   
 {
-  if (!require(XML)) install.packages("XML"); library(XML)    #Package to handle the xml format and structure
-  if (!require(zoo)) install.packages("zoo"); library(zoo)    #Package to handle time series
-  if (!require(xts)) install.packages("xts"); library(xts)    #Package to handle time series
+  if (!require(XML)) install.packages("XML",repos = "https://cran.stat.auckland.ac.nz"); library(XML)    #Package to handle the xml format and structure
+  if (!require(zoo)) install.packages("zoo",repos = "https://cran.stat.auckland.ac.nz"); library(zoo)    #Package to handle time series
+  if (!require(xts)) install.packages("xts",repos = "https://cran.stat.auckland.ac.nz"); library(xts)    #Package to handle time series
   #browser()
   #Read the data files
   xmlfile=xmlParse(unzip(ECSFile))
@@ -166,9 +166,9 @@ SnowSim_Opuha<-function(start_year=2017,end_year=2017,InputWorkingDirectory="\\\
 {
   
   ## Load required packages
-  if (!require(maptools)) install.packages("maptools"); library(maptools)   
-  if (!require(rgdal)) install.packages("rgdal"); library(rgdal)     
-  if (!require(raster)) install.packages("raster"); library(raster)    
+  if (!require(maptools)) install.packages("maptools",repos = "https://cran.stat.auckland.ac.nz"); library(maptools)   
+  if (!require(rgdal)) install.packages("rgdal",repos = "https://cran.stat.auckland.ac.nz"); library(rgdal)     
+  if (!require(raster)) install.packages("raster",repos = "https://cran.stat.auckland.ac.nz"); library(raster)    
 
   
   ##Assign constants
@@ -245,9 +245,9 @@ SnowSim_OpuhaV5<-function(start_year=1981,end_year=2016,
   {
   
   ## Load required packages
-  if (!require(maptools)) install.packages("maptools"); library(maptools)   
-  if (!require(rgdal)) install.packages("rgdal"); library(rgdal)     
-  if (!require(raster)) install.packages("raster"); library(raster)    
+  if (!require(maptools)) install.packages("maptools",repos = "https://cran.stat.auckland.ac.nz"); library(maptools)   
+  if (!require(rgdal)) install.packages("rgdal",repos = "https://cran.stat.auckland.ac.nz"); library(rgdal)     
+  if (!require(raster)) install.packages("raster",repos = "https://cran.stat.auckland.ac.nz"); library(raster)    
   
   
   ##Assign constants
@@ -365,15 +365,15 @@ UpdateSnowData <- function(CompleteDataFileName="\\\\aqualinc-sbs\\data\\ARL Pro
 MedianMaximum <- function(InputFileName = "\\\\aqualinc-sbs\\data\\ARL Projects\\Other\\C15114_OWL snow storage estimates\\automation\\Input\\OpuhaSnowDataComplete.csv"){
  
   #load libraries
-  if (!require(zoo)) install.packages("zoo"); library(zoo)    
-  if (!require(xts)) install.packages("xts"); library(xts)    
-  if (!require(plyr)) install.packages("plyr"); library(plyr)    
-  if (!require(ggplot2)) install.packages("ggplot2"); library(ggplot2)    
-  if (!require(scales)) install.packages("scales"); library(scales)    
-  if (!require(reshape2)) install.packages("reshape2"); library(reshape2)    
-  if (!require(grid)) install.packages("grid"); library(grid)    
-  if (!require(plotly)) install.packages("plotly"); library(plotly)    
-  if (!require(devtools)) install.packages("devtools"); library(devtools)    
+  if (!require(zoo)) install.packages("zoo",repos = "https://cran.stat.auckland.ac.nz"); library(zoo)    
+  if (!require(xts)) install.packages("xts",repos = "https://cran.stat.auckland.ac.nz"); library(xts)    
+  if (!require(plyr)) install.packages("plyr",repos = "https://cran.stat.auckland.ac.nz"); library(plyr)    
+  if (!require(ggplot2)) install.packages("ggplot2",repos = "https://cran.stat.auckland.ac.nz"); library(ggplot2)    
+  if (!require(scales)) install.packages("scales",repos = "https://cran.stat.auckland.ac.nz"); library(scales)    
+  if (!require(reshape2)) install.packages("reshape2",repos = "https://cran.stat.auckland.ac.nz"); library(reshape2)    
+  if (!require(grid)) install.packages("grid",repos = "https://cran.stat.auckland.ac.nz"); library(grid)    
+  if (!require(plotly)) install.packages("plotly",repos = "https://cran.stat.auckland.ac.nz"); library(plotly)    
+  if (!require(devtools)) install.packages("devtools",repos = "https://cran.stat.auckland.ac.nz"); library(devtools)    
 
   
   #Load in the snow time series data
@@ -416,15 +416,15 @@ GraphOpuhaSnowM3Y<-function(InputFileName = "\\\\aqualinc-sbs\\data\\ARL Project
   
   
   #load libraries
-  if (!require(zoo)) install.packages("zoo"); library(zoo)    
-  if (!require(xts)) install.packages("xts"); library(xts)    
-  if (!require(plyr)) install.packages("plyr"); library(plyr)    
-  if (!require(ggplot2)) install.packages("ggplot2"); library(ggplot2)    
-  if (!require(scales)) install.packages("scales"); library(scales)    
-  if (!require(reshape2)) install.packages("reshape2"); library(reshape2)    
-  if (!require(grid)) install.packages("grid"); library(grid)    
-  if (!require(plotly)) install.packages("plotly"); library(plotly)    
-  if (!require(devtools)) install.packages("devtools"); library(devtools)
+  if (!require(zoo)) install.packages("zoo",repos = "https://cran.stat.auckland.ac.nz"); library(zoo)    
+  if (!require(xts)) install.packages("xts",repos = "https://cran.stat.auckland.ac.nz"); library(xts)    
+  if (!require(plyr)) install.packages("plyr",repos = "https://cran.stat.auckland.ac.nz"); library(plyr)    
+  if (!require(ggplot2)) install.packages("ggplot2",repos = "https://cran.stat.auckland.ac.nz"); library(ggplot2)    
+  if (!require(scales)) install.packages("scales",repos = "https://cran.stat.auckland.ac.nz"); library(scales)    
+  if (!require(reshape2)) install.packages("reshape2",repos = "https://cran.stat.auckland.ac.nz"); library(reshape2)    
+  if (!require(grid)) install.packages("grid",repos = "https://cran.stat.auckland.ac.nz"); library(grid)    
+  if (!require(plotly)) install.packages("plotly",repos = "https://cran.stat.auckland.ac.nz"); library(plotly)    
+  if (!require(devtools)) install.packages("devtools",repos = "https://cran.stat.auckland.ac.nz"); library(devtools)
 
   #Load in the snow time series data
   SnowWaterEquivalent  <-  read.zoo(InputFileName,index.column="Date",sep=",",format="%Y-%m-%d",header=TRUE,regular=FALSE,colClasses=c("character","double","double")) 
@@ -590,15 +590,15 @@ GraphOpuhaSnow3Axis<-function(InputFileName = "\\\\aqualinc-sbs\\data\\ARL Proje
   
   
   #load libraries
-  if (!require(zoo)) install.packages("zoo"); library(zoo)    
-  if (!require(xts)) install.packages("xts"); library(xts)    
-  if (!require(plyr)) install.packages("plyr"); library(plyr)    
-  if (!require(ggplot2)) install.packages("ggplot2"); library(ggplot2)    
-  if (!require(scales)) install.packages("scales"); library(scales)    
-  if (!require(reshape2)) install.packages("reshape2"); library(reshape2)    
-  if (!require(grid)) install.packages("grid"); library(grid)    
-  if (!require(plotly)) install.packages("plotly"); library(plotly)    
-  if (!require(devtools)) install.packages("devtools"); library(devtools)
+  if (!require(zoo)) install.packages("zoo",repos = "https://cran.stat.auckland.ac.nz"); library(zoo)    
+  if (!require(xts)) install.packages("xts",repos = "https://cran.stat.auckland.ac.nz"); library(xts)    
+  if (!require(plyr)) install.packages("plyr",repos = "https://cran.stat.auckland.ac.nz"); library(plyr)    
+  if (!require(ggplot2)) install.packages("ggplot2",repos = "https://cran.stat.auckland.ac.nz"); library(ggplot2)    
+  if (!require(scales)) install.packages("scales",repos = "https://cran.stat.auckland.ac.nz"); library(scales)    
+  if (!require(reshape2)) install.packages("reshape2",repos = "https://cran.stat.auckland.ac.nz"); library(reshape2)    
+  if (!require(grid)) install.packages("grid",repos = "https://cran.stat.auckland.ac.nz"); library(grid)    
+  if (!require(plotly)) install.packages("plotly",repos = "https://cran.stat.auckland.ac.nz"); library(plotly)    
+  if (!require(devtools)) install.packages("devtools",repos = "https://cran.stat.auckland.ac.nz"); library(devtools)
   
   #Load in the snow time series data
   SnowWaterEquivalent  <-  read.zoo(InputFileName,index.column="Date",sep=",",format="%Y-%m-%d",header=TRUE,regular=FALSE,colClasses=c("character","double","double")) 
@@ -715,7 +715,7 @@ dev.off()
 #pandoc is used to create the snow storage graph in html
 #On my Windows laptop version
 if ((Sys.info()['sysname'] == "Windows") & (Sys.info()['nodename'] == "DESKTOP-H33OPJ4")){
-  #if (!require(ssh)) install.packages('ssh'); library(ssh)
+  #if (!require(ssh)) install.packages('ssh',repos = "https://cran.stat.auckland.ac.nz"); library(ssh)
   Sys.setenv(RSTUDIO_PANDOC = "C:/Program Files/RStudio/bin/pandoc")
   setwd('D:/Projects/Aqualinc/projects/Opuha SnowSim_C15114/R/OWLSnow/automation/Processes')
 } else if ((Sys.info()['sysname'] == "Windows") & (Sys.info()['nodename'] == "APPSERVER-01")) 
